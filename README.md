@@ -1,6 +1,8 @@
 # telescope-nodescripts.nvim
 An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to run the scripts from your `package.json`.
 
+![demo](./assets/demo.gif)
+
 ## Requirements
 - Neovim >= 0.5
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
@@ -36,7 +38,8 @@ require("telescope").setup {
   extensions = {
       nodescripts = {
           command = "npm run",        -- command to run your node scripts
-          display_method = "vsplit"   -- window method to open the terminal
+          display_method = "vsplit",  -- window method to open the terminal
+          ignore_pre_post = true      -- ignore pre and post scripts
         }
     }
 }
