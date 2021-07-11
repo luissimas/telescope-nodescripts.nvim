@@ -8,7 +8,8 @@ local themes = require("telescope.themes")
 -- Config defaults
 local defaults = {
   command = "npm run",
-  display_method = "vsplit"
+  display_method = "vsplit",
+  ignore_pre_post = true
 }
 
 local config
@@ -29,7 +30,11 @@ local function get_scripts()
 
   for key, _ in pairs(package.scripts) do
     -- Removing pre and post scripts
-    if not key:match("^pre") and not key:match("^post") then
+    if config.ignore_pre_post then
+      if not key:match("^pre") and not key:match("^post") then
+        table.insert(scripts, key)
+      end
+    else
       table.insert(scripts, key)
     end
   end
