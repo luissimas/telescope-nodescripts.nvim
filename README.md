@@ -1,7 +1,7 @@
 # telescope-nodescripts.nvim
 An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to run the scripts from your `package.json`.
 
-![demo](./assets/demo.gif)
+![demo](https://s6.gifyu.com/images/demo17b478e64ba6e9a2.gif)
 
 ## Requirements
 - Neovim >= 0.5
