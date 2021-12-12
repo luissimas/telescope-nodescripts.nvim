@@ -1,6 +1,7 @@
 local json = require("telescope._extensions.nodescripts.json")
 local pickers = require("telescope.pickers")
 local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
 local finders = require("telescope.finders")
 local sorters = require("telescope.sorters")
 local themes = require("telescope.themes")
@@ -17,7 +18,7 @@ local config
 local M = {}
 
 function actions.run_command()
-  local script = actions.get_selected_entry()[1]
+  local script = action_state.get_selected_entry()[1]
 
   vim.cmd(":" .. config.display_method .. " | terminal")
   vim.cmd(":call jobsend(b:terminal_job_id, ['" .. config.command .. " " .. script .. "', ''])")
