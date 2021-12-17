@@ -1,16 +1,16 @@
 # telescope-nodescripts.nvim
-An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to run the scripts from your `package.json`.
+An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to run scripts from your `package.json`.
 
 ![demo](https://s6.gifyu.com/images/demo17b478e64ba6e9a2.gif)
 
 ## Requirements
-- Neovim >= 0.5
+- Neovim >= 0.6
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Install
 Install with your preferred package manager, the following example uses [packer](https://github.com/wbthomason/packer.nvim):
 ```lua
-use "luissimas/telescope-nodescripts.nvim",
+use "luissimas/telescope-nodescripts.nvim"
 ```
 
 ## Setup
